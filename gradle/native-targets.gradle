@@ -102,6 +102,8 @@ kotlin {
                 addTarget(presets.linuxArm64)
             }
 
+		//addTarget(presets.androidNativeX64)
+
             // Mac & iOS
             addTarget(presets.macosX64)
 
