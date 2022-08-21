@@ -15,3 +15,5 @@ target
 
 # Modules for JS projects build
 node_modules
+kotlin-js-store
+local.properties
