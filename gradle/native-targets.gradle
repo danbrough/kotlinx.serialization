@@ -26,7 +26,7 @@ def getNativeState(String description) {
             return NativeState.DISABLED
         // 'single', 'false', etc
         default:
-            return NativeState.SINGLE
+            return NativeState.ALL
     }
 }
 
@@ -95,6 +95,11 @@ kotlin {
             addTarget(presets.linuxX64)
             addTarget(presets.linuxArm32Hfp)
             addTarget(presets.linuxArm64)
+
+		addTarget(presets.androidNativeX64)
+		addTarget(presets.androidNativeX86)
+		addTarget(presets.androidNativeArm32)
+		addTarget(presets.androidNativeArm64)
 
             // Mac & iOS
             addTarget(presets.macosX64)
