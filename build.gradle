@@ -100,7 +100,7 @@ knit {
 knitPrepare.dependsOn "dokka"
 
 allprojects {
-    group 'org.jetbrains.kotlinx'
+    group 'org.danbrough.kotlinx'
 
     def deployVersion = properties['DeployVersion']
     if (deployVersion != null) version = deployVersion
