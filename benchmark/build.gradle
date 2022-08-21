@@ -30,7 +30,7 @@ dependencies {
     implementation 'com.google.guava:guava:31.1-jre'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3'
-    implementation "com.squareup.okio:okio:$okio_version"
+    implementation "org.danbrough.okio:okio:$okio_version"
     implementation project(':kotlinx-serialization-core')
     implementation project(':kotlinx-serialization-json')
     implementation project(':kotlinx-serialization-json-okio')

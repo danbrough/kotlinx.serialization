@@ -112,6 +112,7 @@ kotlin {
                 addTarget(presets.iosArm32)
             }
             addTarget(presets.iosX64)
+		addTarget(presets.androidNativeArm32)
 
             addTarget(presets.watchosX86)
             addTarget(presets.watchosX64)

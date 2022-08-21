@@ -35,7 +35,7 @@ kotlin {
             dependencies {
                 api(project(":kotlinx-serialization-json"))
                 api(project(":kotlinx-serialization-json-okio"))
-                implementation("com.squareup.okio:okio:${property("okio_version")}")
+                implementation("org.danbrough.okio:okio:${property("okio_version")}")
             }
         }
 
