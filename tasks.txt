@@ -1,0 +1,376 @@
+> Task :buildSrc:compileKotlin UP-TO-DATE
+> Task :buildSrc:compileJava NO-SOURCE
+> Task :buildSrc:compileGroovy NO-SOURCE
+> Task :buildSrc:pluginDescriptors UP-TO-DATE
+> Task :buildSrc:processResources NO-SOURCE
+> Task :buildSrc:classes UP-TO-DATE
+> Task :buildSrc:inspectClassesForKotlinIC UP-TO-DATE
+> Task :buildSrc:jar UP-TO-DATE
+> Task :buildSrc:assemble UP-TO-DATE
+> Task :buildSrc:compileTestKotlin NO-SOURCE
+> Task :buildSrc:pluginUnderTestMetadata UP-TO-DATE
+> Task :buildSrc:compileTestJava NO-SOURCE
+> Task :buildSrc:compileTestGroovy NO-SOURCE
+> Task :buildSrc:processTestResources NO-SOURCE
+> Task :buildSrc:testClasses UP-TO-DATE
+> Task :buildSrc:test NO-SOURCE
+> Task :buildSrc:validatePlugins UP-TO-DATE
+> Task :buildSrc:check UP-TO-DATE
+> Task :buildSrc:build UP-TO-DATE
+
+> Configure project :
+Project property 'kotlin.parallel.tasks.in.project' is deprecated.
+By default it depends on Gradle parallel project execution option value.
+Using Kotlin compiler version: 1.6.10
+
+Some Kotlin/Native targets cannot be built on this linux_x64 machine and are disabled:
+    * In project ':kotlinx-serialization-cbor':
+        * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
+    * In project ':kotlinx-serialization-core':
+        * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
+    * In project ':kotlinx-serialization-json':
+        * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
+    * In project ':kotlinx-serialization-properties':
+        * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
+    * In project ':kotlinx-serialization-protobuf':
+        * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
+To hide this message, add 'kotlin.native.ignoreDisabledTargets=true' to the Gradle properties.
+
+
+> Task :tasks
+
+------------------------------------------------------------
+Tasks runnable from root project 'kotlinx-serialization'
+------------------------------------------------------------
+
+Build tasks
+-----------
+allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
+androidNativeArm32MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeArm32'
+androidNativeArm32TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeArm32'
+androidNativeArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeArm64'
+androidNativeArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeArm64'
+androidNativeX64MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeX64'
+androidNativeX64TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeX64'
+androidNativeX86MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeX86'
+androidNativeX86TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeX86'
+assemble - Assembles the outputs of this project.
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildKotlinToolingMetadata - Build metadata json file containing information about the used Kotlin tooling
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles main classes.
+clean - Deletes the build directory.
+compileKotlinAndroidNativeArm32 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinAndroidNativeArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinAndroidNativeX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinAndroidNativeX86 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinIosArm32 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinIosX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinLinuxArm32Hfp - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinLinuxArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinLinuxX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinMacosArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinMacosX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinMingwX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinMingwX86 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinTvosArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinTvosSimulatorArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinTvosX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinWatchosArm32 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinWatchosArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinWatchosSimulatorArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinWatchosX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinWatchosX86 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation for target 'common'.
+compileTestKotlinAndroidNativeArm32 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinAndroidNativeArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinAndroidNativeX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinAndroidNativeX86 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinIosArm32 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinIosX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinLinuxArm32Hfp - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinLinuxArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinLinuxX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinMacosArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinMacosX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinMingwX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinMingwX86 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinTvosArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinTvosSimulatorArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinTvosX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinWatchosArm32 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinWatchosArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinWatchosSimulatorArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinWatchosX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinWatchosX86 - Compiles a klibrary from the 'test' compilation for target 'native'.
+iosArm32MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm32'
+iosArm32TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm32'
+iosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosArm64'
+iosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosArm64'
+iosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosSimulatorArm64'
+iosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosSimulatorArm64'
+iosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'iosX64'
+iosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'iosX64'
+jar - Assembles a jar archive containing the main classes.
+jmhClasses - Assembles jmh classes.
+jsIrJar - Assembles an archive containing the main classes.
+jsIrMainClasses - Assembles outputs for compilation 'main' of target 'jsIr'
+jsIrTestClasses - Assembles outputs for compilation 'test' of target 'jsIr'
+jsLegacyJar - Assembles an archive containing the main classes.
+jsLegacyMainClasses - Assembles outputs for compilation 'main' of target 'jsLegacy'
+jsLegacyTestClasses - Assembles outputs for compilation 'test' of target 'jsLegacy'
+jvmJar - Assembles an archive containing the main classes.
+jvmMainClasses - Assembles outputs for compilation 'main' of target 'jvm'
+jvmTestClasses - Assembles outputs for compilation 'test' of target 'jvm'
+linkBackgroundDebugTestLinuxX64 - Links a test executable 'backgroundDebugTest' for a target 'linuxX64'.
+linkBackgroundDebugTestMacosArm64 - Links a test executable 'backgroundDebugTest' for a target 'macosArm64'.
+linkBackgroundDebugTestMacosX64 - Links a test executable 'backgroundDebugTest' for a target 'macosX64'.
+linkBackgroundDebugTestMingwX64 - Links a test executable 'backgroundDebugTest' for a target 'mingwX64'.
+linkDebugTestAndroidNativeArm32 - Links a test executable 'debugTest' for a target 'androidNativeArm32'.
+linkDebugTestAndroidNativeArm64 - Links a test executable 'debugTest' for a target 'androidNativeArm64'.
+linkDebugTestAndroidNativeX64 - Links a test executable 'debugTest' for a target 'androidNativeX64'.
+linkDebugTestAndroidNativeX86 - Links a test executable 'debugTest' for a target 'androidNativeX86'.
+linkDebugTestIosArm32 - Links a test executable 'debugTest' for a target 'iosArm32'.
+linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
+linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
+linkDebugTestIosX64 - Links a test executable 'debugTest' for a target 'iosX64'.
+linkDebugTestLinuxArm32Hfp - Links a test executable 'debugTest' for a target 'linuxArm32Hfp'.
+linkDebugTestLinuxArm64 - Links a test executable 'debugTest' for a target 'linuxArm64'.
+linkDebugTestLinuxX64 - Links a test executable 'debugTest' for a target 'linuxX64'.
+linkDebugTestMacosArm64 - Links a test executable 'debugTest' for a target 'macosArm64'.
+linkDebugTestMacosX64 - Links a test executable 'debugTest' for a target 'macosX64'.
+linkDebugTestMingwX64 - Links a test executable 'debugTest' for a target 'mingwX64'.
+linkDebugTestMingwX86 - Links a test executable 'debugTest' for a target 'mingwX86'.
+linkDebugTestTvosArm64 - Links a test executable 'debugTest' for a target 'tvosArm64'.
+linkDebugTestTvosSimulatorArm64 - Links a test executable 'debugTest' for a target 'tvosSimulatorArm64'.
+linkDebugTestTvosX64 - Links a test executable 'debugTest' for a target 'tvosX64'.
+linkDebugTestWatchosArm32 - Links a test executable 'debugTest' for a target 'watchosArm32'.
+linkDebugTestWatchosArm64 - Links a test executable 'debugTest' for a target 'watchosArm64'.
+linkDebugTestWatchosSimulatorArm64 - Links a test executable 'debugTest' for a target 'watchosSimulatorArm64'.
+linkDebugTestWatchosX64 - Links a test executable 'debugTest' for a target 'watchosX64'.
+linkDebugTestWatchosX86 - Links a test executable 'debugTest' for a target 'watchosX86'.
+linuxArm32HfpMainKlibrary - Assembles outputs for compilation 'main' of target 'linuxArm32Hfp'
+linuxArm32HfpTestKlibrary - Assembles outputs for compilation 'test' of target 'linuxArm32Hfp'
+linuxArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'linuxArm64'
+linuxArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'linuxArm64'
+linuxX64MainKlibrary - Assembles outputs for compilation 'main' of target 'linuxX64'
+linuxX64TestKlibrary - Assembles outputs for compilation 'test' of target 'linuxX64'
+macosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'macosArm64'
+macosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'macosArm64'
+macosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'macosX64'
+macosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'macosX64'
+metadataCommonMainClasses - Assembles outputs for compilation 'commonMain' of target 'metadata'
+metadataMainClasses - Assembles outputs for compilation 'main' of target 'metadata'
+metadataNativeMainClasses - Assembles outputs for compilation 'nativeMain' of target 'metadata'
+mingwX64MainKlibrary - Assembles outputs for compilation 'main' of target 'mingwX64'
+mingwX64TestKlibrary - Assembles outputs for compilation 'test' of target 'mingwX64'
+mingwX86MainKlibrary - Assembles outputs for compilation 'main' of target 'mingwX86'
+mingwX86TestKlibrary - Assembles outputs for compilation 'test' of target 'mingwX86'
+testClasses - Assembles test classes.
+tvosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'tvosArm64'
+tvosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'tvosArm64'
+tvosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'tvosSimulatorArm64'
+tvosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'tvosSimulatorArm64'
+tvosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'tvosX64'
+tvosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'tvosX64'
+watchosArm32MainKlibrary - Assembles outputs for compilation 'main' of target 'watchosArm32'
+watchosArm32TestKlibrary - Assembles outputs for compilation 'test' of target 'watchosArm32'
+watchosArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'watchosArm64'
+watchosArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'watchosArm64'
+watchosSimulatorArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'watchosSimulatorArm64'
+watchosSimulatorArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'watchosSimulatorArm64'
+watchosX64MainKlibrary - Assembles outputs for compilation 'main' of target 'watchosX64'
+watchosX64TestKlibrary - Assembles outputs for compilation 'test' of target 'watchosX64'
+watchosX86MainKlibrary - Assembles outputs for compilation 'main' of target 'watchosX86'
+watchosX86TestKlibrary - Assembles outputs for compilation 'test' of target 'watchosX86'
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build.
+wrapper - Generates Gradle wrapper files.
+
+Documentation tasks
+-------------------
+dokkaGfm - Generates documentation in GitHub flavored markdown format
+dokkaGfmCollector - Generates documentation merging all subprojects 'dokkaGfm' tasks into one virtual module
+dokkaGfmMultiModule - Runs all subprojects 'dokkaGfm' tasks and generates module navigation page
+dokkaHtml - Generates documentation in 'html' format
+dokkaHtmlCollector - Generates documentation merging all subprojects 'dokkaHtml' tasks into one virtual module
+dokkaHtmlMultiModule - Runs all subprojects 'dokkaHtml' tasks and generates module navigation page
+dokkaJavadoc - Generates documentation in 'javadoc' format
+dokkaJavadocCollector - Generates documentation merging all subprojects 'dokkaJavadoc' tasks into one virtual module
+dokkaJekyll - Generates documentation in Jekyll flavored markdown format
+dokkaJekyllCollector - Generates documentation merging all subprojects 'dokkaJekyll' tasks into one virtual module
+dokkaJekyllMultiModule - Runs all subprojects 'dokkaJekyll' tasks and generates module navigation page
+javadoc - Generates Javadoc API documentation for the main source code.
+knit - Runs Knit tool
+knitCheck - Runs Knit tool check (does not modify anything)
+knitPrepare - Prepares dependencies for Knit tool
+
+Dukat tasks
+-----------
+jsIrGenerateExternals - Generate Kotlin/JS external declarations for .d.ts files of all NPM dependencies in compilation 'main' (target jsIr (js))
+jsIrGenerateExternalsIntegrated - Integrated generation Kotlin/JS external declarations for .d.ts files in compilation 'main' (target jsIr (js))
+jsLegacyGenerateExternals - Generate Kotlin/JS external declarations for .d.ts files of all NPM dependencies in compilation 'main' (target jsLegacy (js))
+
+Help tasks
+----------
+buildEnvironment - Displays all buildscript dependencies declared in root project 'kotlinx-serialization'.
+dependencies - Displays all dependencies declared in root project 'kotlinx-serialization'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'kotlinx-serialization'.
+help - Displays a help message.
+javaToolchains - Displays the detected java toolchains. [incubating]
+outgoingVariants - Displays the outgoing variants of root project 'kotlinx-serialization'.
+projects - Displays the sub-projects of root project 'kotlinx-serialization'.
+properties - Displays the properties of root project 'kotlinx-serialization'.
+tasks - Displays the tasks runnable from root project 'kotlinx-serialization' (some of the displayed tasks may belong to subprojects).
+
+IDE tasks
+---------
+cleanIdea - Cleans IDEA project files (IML, IPR)
+idea - Generates IDEA project files (IML, IPR, IWS)
+
+Jmh tasks
+---------
+jmh
+jmhCompileGeneratedClasses
+jmhJar - Create a combined JAR of project and runtime dependencies
+jmhRunBytecodeGenerator
+
+NodeJs tasks
+------------
+jsIrPackageJson - Create package.json file for compilation 'main' (target jsIr (js))
+jsIrTestPackageJson - Create package.json file for compilation 'test' (target jsIr (js))
+jsLegacyPackageJson - Create package.json file for compilation 'main' (target jsLegacy (js))
+jsLegacyTestPackageJson - Create package.json file for compilation 'test' (target jsLegacy (js))
+kotlinNodeJsSetup - Download and install a local node/npm version
+kotlinNpmCachesSetup - Setup file hasher for caches
+kotlinNpmInstall - Find, download and link NPM dependencies and projects
+kotlinYarnSetup - Download and install a local yarn version
+nodeKotlinClean - Clean unused local node version
+rootPackageJson - Create root package.json
+
+Publishing tasks
+----------------
+generateMetadataFileForAndroidNativeArm32Publication - Generates the Gradle metadata file for publication 'androidNativeArm32'.
+generateMetadataFileForAndroidNativeArm64Publication - Generates the Gradle metadata file for publication 'androidNativeArm64'.
+generateMetadataFileForAndroidNativeX64Publication - Generates the Gradle metadata file for publication 'androidNativeX64'.
+generateMetadataFileForAndroidNativeX86Publication - Generates the Gradle metadata file for publication 'androidNativeX86'.
+generateMetadataFileForJsPublication - Generates the Gradle metadata file for publication 'js'.
+generateMetadataFileForJvmPublication - Generates the Gradle metadata file for publication 'jvm'.
+generateMetadataFileForKotlinMultiplatformPublication - Generates the Gradle metadata file for publication 'kotlinMultiplatform'.
+generateMetadataFileForLinuxArm32HfpPublication - Generates the Gradle metadata file for publication 'linuxArm32Hfp'.
+generateMetadataFileForLinuxArm64Publication - Generates the Gradle metadata file for publication 'linuxArm64'.
+generateMetadataFileForLinuxX64Publication - Generates the Gradle metadata file for publication 'linuxX64'.
+generateMetadataFileForMavenBomPublication - Generates the Gradle metadata file for publication 'mavenBom'.
+generateMetadataFileForMavenPublication - Generates the Gradle metadata file for publication 'maven'.
+generateMetadataFileForMingwX64Publication - Generates the Gradle metadata file for publication 'mingwX64'.
+generateMetadataFileForMingwX86Publication - Generates the Gradle metadata file for publication 'mingwX86'.
+generatePomFileForAndroidNativeArm32Publication - Generates the Maven POM file for publication 'androidNativeArm32'.
+generatePomFileForAndroidNativeArm64Publication - Generates the Maven POM file for publication 'androidNativeArm64'.
+generatePomFileForAndroidNativeX64Publication - Generates the Maven POM file for publication 'androidNativeX64'.
+generatePomFileForAndroidNativeX86Publication - Generates the Maven POM file for publication 'androidNativeX86'.
+generatePomFileForJsPublication - Generates the Maven POM file for publication 'js'.
+generatePomFileForJvmPublication - Generates the Maven POM file for publication 'jvm'.
+generatePomFileForKotlinMultiplatformPublication - Generates the Maven POM file for publication 'kotlinMultiplatform'.
+generatePomFileForLinuxArm32HfpPublication - Generates the Maven POM file for publication 'linuxArm32Hfp'.
+generatePomFileForLinuxArm64Publication - Generates the Maven POM file for publication 'linuxArm64'.
+generatePomFileForLinuxX64Publication - Generates the Maven POM file for publication 'linuxX64'.
+generatePomFileForMavenBomPublication - Generates the Maven POM file for publication 'mavenBom'.
+generatePomFileForMavenPublication - Generates the Maven POM file for publication 'maven'.
+generatePomFileForMingwX64Publication - Generates the Maven POM file for publication 'mingwX64'.
+generatePomFileForMingwX86Publication - Generates the Maven POM file for publication 'mingwX86'.
+publish - Publishes all publications produced by this project.
+publishAllPublicationsToMavenRepository - Publishes all Maven publications produced by this project to the maven repository.
+publishAndroidNativeArm32PublicationToMavenLocal - Publishes Maven publication 'androidNativeArm32' to the local Maven repository.
+publishAndroidNativeArm32PublicationToMavenRepository - Publishes Maven publication 'androidNativeArm32' to Maven repository 'maven'.
+publishAndroidNativeArm64PublicationToMavenLocal - Publishes Maven publication 'androidNativeArm64' to the local Maven repository.
+publishAndroidNativeArm64PublicationToMavenRepository - Publishes Maven publication 'androidNativeArm64' to Maven repository 'maven'.
+publishAndroidNativeX64PublicationToMavenLocal - Publishes Maven publication 'androidNativeX64' to the local Maven repository.
+publishAndroidNativeX64PublicationToMavenRepository - Publishes Maven publication 'androidNativeX64' to Maven repository 'maven'.
+publishAndroidNativeX86PublicationToMavenLocal - Publishes Maven publication 'androidNativeX86' to the local Maven repository.
+publishAndroidNativeX86PublicationToMavenRepository - Publishes Maven publication 'androidNativeX86' to Maven repository 'maven'.
+publishJsPublicationToMavenLocal - Publishes Maven publication 'js' to the local Maven repository.
+publishJsPublicationToMavenRepository - Publishes Maven publication 'js' to Maven repository 'maven'.
+publishJvmPublicationToMavenLocal - Publishes Maven publication 'jvm' to the local Maven repository.
+publishJvmPublicationToMavenRepository - Publishes Maven publication 'jvm' to Maven repository 'maven'.
+publishKotlinMultiplatformPublicationToMavenLocal - Publishes Maven publication 'kotlinMultiplatform' to the local Maven repository.
+publishKotlinMultiplatformPublicationToMavenRepository - Publishes Maven publication 'kotlinMultiplatform' to Maven repository 'maven'.
+publishLinuxArm32HfpPublicationToMavenLocal - Publishes Maven publication 'linuxArm32Hfp' to the local Maven repository.
+publishLinuxArm32HfpPublicationToMavenRepository - Publishes Maven publication 'linuxArm32Hfp' to Maven repository 'maven'.
+publishLinuxArm64PublicationToMavenLocal - Publishes Maven publication 'linuxArm64' to the local Maven repository.
+publishLinuxArm64PublicationToMavenRepository - Publishes Maven publication 'linuxArm64' to Maven repository 'maven'.
+publishLinuxX64PublicationToMavenLocal - Publishes Maven publication 'linuxX64' to the local Maven repository.
+publishLinuxX64PublicationToMavenRepository - Publishes Maven publication 'linuxX64' to Maven repository 'maven'.
+publishMavenBomPublicationToMavenLocal - Publishes Maven publication 'mavenBom' to the local Maven repository.
+publishMavenBomPublicationToMavenRepository - Publishes Maven publication 'mavenBom' to Maven repository 'maven'.
+publishMavenPublicationToMavenLocal - Publishes Maven publication 'maven' to the local Maven repository.
+publishMavenPublicationToMavenRepository - Publishes Maven publication 'maven' to Maven repository 'maven'.
+publishMingwX64PublicationToMavenLocal - Publishes Maven publication 'mingwX64' to the local Maven repository.
+publishMingwX64PublicationToMavenRepository - Publishes Maven publication 'mingwX64' to Maven repository 'maven'.
+publishMingwX86PublicationToMavenLocal - Publishes Maven publication 'mingwX86' to the local Maven repository.
+publishMingwX86PublicationToMavenRepository - Publishes Maven publication 'mingwX86' to Maven repository 'maven'.
+publishToMavenLocal - Publishes all Maven publications produced by this project to the local Maven cache.
+
+Shadow tasks
+------------
+knows - Do you know who knows?
+shadowJar - Create a combined JAR of project and runtime dependencies
+
+Verification tasks
+------------------
+allTests - Runs the tests for all targets and create aggregated report
+apiCheck - Checks signatures of public API against the golden value in API folder for kotlinx-serialization-cbor
+check - Runs all checks.
+iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
+iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
+jsIrNodeTest - Run all jsIr tests inside nodejs using the builtin test framework
+jsIrTest - Run JS tests for all platforms
+jsLegacyNodeTest - Run all jsLegacy tests inside nodejs using the builtin test framework
+jsLegacyTest - Run JS tests for all platforms
+jvmTest - Runs the tests of the test test run.
+koverCollectReports - Collects reports from all submodules in one directory.
+koverHtmlReport - Generates code coverage HTML report for all module's test tasks.
+koverReport - Generates code coverage HTML and XML reports for all module's test tasks.
+koverVerify - Verifies code coverage metrics based on specified rules.
+koverXmlReport - Generates code coverage XML report for all module's test tasks.
+linuxX64BackgroundTest - Executes Kotlin/Native unit tests for target linuxX64.
+linuxX64Test - Executes Kotlin/Native unit tests for target linuxX64.
+macosArm64BackgroundTest - Executes Kotlin/Native unit tests for target macosArm64.
+macosArm64Test - Executes Kotlin/Native unit tests for target macosArm64.
+macosX64BackgroundTest - Executes Kotlin/Native unit tests for target macosX64.
+macosX64Test - Executes Kotlin/Native unit tests for target macosX64.
+mingwX64BackgroundTest - Executes Kotlin/Native unit tests for target mingwX64.
+mingwX64Test - Executes Kotlin/Native unit tests for target mingwX64.
+test - Runs the unit tests.
+tvosSimulatorArm64Test - Executes Kotlin/Native unit tests for target tvosSimulatorArm64.
+tvosX64Test - Executes Kotlin/Native unit tests for target tvosX64.
+watchosSimulatorArm64Test - Executes Kotlin/Native unit tests for target watchosSimulatorArm64.
+watchosX64Test - Executes Kotlin/Native unit tests for target watchosX64.
+watchosX86Test - Executes Kotlin/Native unit tests for target watchosX86.
+
+Other tasks
+-----------
+apiDump - Syncs API from build dir to api dir for kotlinx-serialization-cbor
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+To see all tasks and more detail, run gradlew tasks --all
+
+To see more detail about a task, run gradlew help --task <task>
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.9.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 9s
+1 actionable task: 1 executed
