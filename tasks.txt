@@ -17,7 +17,11 @@
 > Task :buildSrc:validatePlugins UP-TO-DATE
 > Task :buildSrc:check UP-TO-DATE
 > Task :buildSrc:build UP-TO-DATE
-Using Kotlin compiler version: 1.7.10
+
+> Configure project :
+Project property 'kotlin.parallel.tasks.in.project' is deprecated.
+By default it depends on Gradle parallel project execution option value.
+Using Kotlin compiler version: 1.6.10
 
 Some Kotlin/Native targets cannot be built on this linux_x64 machine and are disabled:
     * In project ':kotlinx-serialization-cbor':
@@ -26,10 +30,6 @@ Some Kotlin/Native targets cannot be built on this linux_x64 machine and are dis
         * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
     * In project ':kotlinx-serialization-json':
         * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
-    * In project ':kotlinx-serialization-json-okio':
-        * targets 'macosX64', 'iosArm64', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
-    * In project ':kotlinx-serialization-json-tests':
-        * targets 'macosX64', 'iosArm64', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
     * In project ':kotlinx-serialization-properties':
         * targets 'macosX64', 'iosArm64', 'iosArm32', 'iosX64', 'watchosX86', 'watchosX64', 'watchosArm32', 'watchosArm64', 'tvosArm64', 'tvosX64', 'iosSimulatorArm64', 'watchosSimulatorArm64', 'tvosSimulatorArm64', 'macosArm64' (can be built with one of the hosts: macos_x64, macos_arm64)
     * In project ':kotlinx-serialization-protobuf':
@@ -48,6 +48,12 @@ Build tasks
 allMetadataJar - Assembles a jar archive containing the metadata for all Kotlin source sets.
 androidNativeArm32MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeArm32'
 androidNativeArm32TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeArm32'
+androidNativeArm64MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeArm64'
+androidNativeArm64TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeArm64'
+androidNativeX64MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeX64'
+androidNativeX64TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeX64'
+androidNativeX86MainKlibrary - Assembles outputs for compilation 'main' of target 'androidNativeX86'
+androidNativeX86TestKlibrary - Assembles outputs for compilation 'test' of target 'androidNativeX86'
 assemble - Assembles the outputs of this project.
 build - Assembles and tests this project.
 buildDependents - Assembles and tests this project and all projects that depend on it.
@@ -56,6 +62,9 @@ buildNeeded - Assembles and tests this project and all projects it depends on.
 classes - Assembles main classes.
 clean - Deletes the build directory.
 compileKotlinAndroidNativeArm32 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinAndroidNativeArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinAndroidNativeX64 - Compiles a klibrary from the 'main' compilation for target 'native'.
+compileKotlinAndroidNativeX86 - Compiles a klibrary from the 'main' compilation for target 'native'.
 compileKotlinIosArm32 - Compiles a klibrary from the 'main' compilation for target 'native'.
 compileKotlinIosArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
 compileKotlinIosSimulatorArm64 - Compiles a klibrary from the 'main' compilation for target 'native'.
@@ -77,6 +86,9 @@ compileKotlinWatchosX64 - Compiles a klibrary from the 'main' compilation for ta
 compileKotlinWatchosX86 - Compiles a klibrary from the 'main' compilation for target 'native'.
 compileNativeMainKotlinMetadata - Compiles a klibrary from the 'nativeMain' compilation for target 'common'.
 compileTestKotlinAndroidNativeArm32 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinAndroidNativeArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinAndroidNativeX64 - Compiles a klibrary from the 'test' compilation for target 'native'.
+compileTestKotlinAndroidNativeX86 - Compiles a klibrary from the 'test' compilation for target 'native'.
 compileTestKotlinIosArm32 - Compiles a klibrary from the 'test' compilation for target 'native'.
 compileTestKotlinIosArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
 compileTestKotlinIosSimulatorArm64 - Compiles a klibrary from the 'test' compilation for target 'native'.
@@ -120,6 +132,9 @@ linkBackgroundDebugTestMacosArm64 - Links a test executable 'backgroundDebugTest
 linkBackgroundDebugTestMacosX64 - Links a test executable 'backgroundDebugTest' for a target 'macosX64'.
 linkBackgroundDebugTestMingwX64 - Links a test executable 'backgroundDebugTest' for a target 'mingwX64'.
 linkDebugTestAndroidNativeArm32 - Links a test executable 'debugTest' for a target 'androidNativeArm32'.
+linkDebugTestAndroidNativeArm64 - Links a test executable 'debugTest' for a target 'androidNativeArm64'.
+linkDebugTestAndroidNativeX64 - Links a test executable 'debugTest' for a target 'androidNativeX64'.
+linkDebugTestAndroidNativeX86 - Links a test executable 'debugTest' for a target 'androidNativeX86'.
 linkDebugTestIosArm32 - Links a test executable 'debugTest' for a target 'iosArm32'.
 linkDebugTestIosArm64 - Links a test executable 'debugTest' for a target 'iosArm64'.
 linkDebugTestIosSimulatorArm64 - Links a test executable 'debugTest' for a target 'iosSimulatorArm64'.
@@ -184,18 +199,14 @@ Documentation tasks
 dokkaGfm - Generates documentation in GitHub flavored markdown format
 dokkaGfmCollector - Generates documentation merging all subprojects 'dokkaGfm' tasks into one virtual module
 dokkaGfmMultiModule - Runs all subprojects 'dokkaGfm' tasks and generates module navigation page
-dokkaGfmPartial - Generates documentation in GitHub flavored markdown format
 dokkaHtml - Generates documentation in 'html' format
 dokkaHtmlCollector - Generates documentation merging all subprojects 'dokkaHtml' tasks into one virtual module
 dokkaHtmlMultiModule - Runs all subprojects 'dokkaHtml' tasks and generates module navigation page
-dokkaHtmlPartial - Generates documentation in 'html' format
 dokkaJavadoc - Generates documentation in 'javadoc' format
 dokkaJavadocCollector - Generates documentation merging all subprojects 'dokkaJavadoc' tasks into one virtual module
-dokkaJavadocPartial - Generates documentation in 'javadoc' format
 dokkaJekyll - Generates documentation in Jekyll flavored markdown format
 dokkaJekyllCollector - Generates documentation merging all subprojects 'dokkaJekyll' tasks into one virtual module
 dokkaJekyllMultiModule - Runs all subprojects 'dokkaJekyll' tasks and generates module navigation page
-dokkaJekyllPartial - Generates documentation in Jekyll flavored markdown format
 javadoc - Generates Javadoc API documentation for the main source code.
 knit - Runs Knit tool
 knitCheck - Runs Knit tool check (does not modify anything)
@@ -213,8 +224,7 @@ buildEnvironment - Displays all buildscript dependencies declared in root projec
 dependencies - Displays all dependencies declared in root project 'kotlinx-serialization'.
 dependencyInsight - Displays the insight into a specific dependency in root project 'kotlinx-serialization'.
 help - Displays a help message.
-javaToolchains - Displays the detected java toolchains.
-kotlinDslAccessorsReport - Prints the Kotlin code for accessing the currently available project extensions and conventions.
+javaToolchains - Displays the detected java toolchains. [incubating]
 outgoingVariants - Displays the outgoing variants of root project 'kotlinx-serialization'.
 projects - Displays the sub-projects of root project 'kotlinx-serialization'.
 properties - Displays the properties of root project 'kotlinx-serialization'.
@@ -224,13 +234,6 @@ IDE tasks
 ---------
 cleanIdea - Cleans IDEA project files (IML, IPR)
 idea - Generates IDEA project files (IML, IPR, IWS)
-
-Interop tasks
--------------
-cleanNativeDistributionCommonization - Deletes all previously commonized klib's from the Kotlin/Native distribution
-commonize - Aggregator task for all c-interop & Native distribution commonizer tasks
-commonizeNativeDistribution - Invokes the commonizer on platform libraries provided by the Kotlin/Native distribution
-runCommonizer - [Deprecated: Use 'commonize' instead]
 
 Jmh tasks
 ---------
@@ -246,6 +249,7 @@ jsIrTestPackageJson - Create package.json file for compilation 'test' (target js
 jsLegacyPackageJson - Create package.json file for compilation 'main' (target jsLegacy (js))
 jsLegacyTestPackageJson - Create package.json file for compilation 'test' (target jsLegacy (js))
 kotlinNodeJsSetup - Download and install a local node/npm version
+kotlinNpmCachesSetup - Setup file hasher for caches
 kotlinNpmInstall - Find, download and link NPM dependencies and projects
 kotlinYarnSetup - Download and install a local yarn version
 nodeKotlinClean - Clean unused local node version
@@ -254,6 +258,9 @@ rootPackageJson - Create root package.json
 Publishing tasks
 ----------------
 generateMetadataFileForAndroidNativeArm32Publication - Generates the Gradle metadata file for publication 'androidNativeArm32'.
+generateMetadataFileForAndroidNativeArm64Publication - Generates the Gradle metadata file for publication 'androidNativeArm64'.
+generateMetadataFileForAndroidNativeX64Publication - Generates the Gradle metadata file for publication 'androidNativeX64'.
+generateMetadataFileForAndroidNativeX86Publication - Generates the Gradle metadata file for publication 'androidNativeX86'.
 generateMetadataFileForJsPublication - Generates the Gradle metadata file for publication 'js'.
 generateMetadataFileForJvmPublication - Generates the Gradle metadata file for publication 'jvm'.
 generateMetadataFileForKotlinMultiplatformPublication - Generates the Gradle metadata file for publication 'kotlinMultiplatform'.
@@ -265,6 +272,9 @@ generateMetadataFileForMavenPublication - Generates the Gradle metadata file for
 generateMetadataFileForMingwX64Publication - Generates the Gradle metadata file for publication 'mingwX64'.
 generateMetadataFileForMingwX86Publication - Generates the Gradle metadata file for publication 'mingwX86'.
 generatePomFileForAndroidNativeArm32Publication - Generates the Maven POM file for publication 'androidNativeArm32'.
+generatePomFileForAndroidNativeArm64Publication - Generates the Maven POM file for publication 'androidNativeArm64'.
+generatePomFileForAndroidNativeX64Publication - Generates the Maven POM file for publication 'androidNativeX64'.
+generatePomFileForAndroidNativeX86Publication - Generates the Maven POM file for publication 'androidNativeX86'.
 generatePomFileForJsPublication - Generates the Maven POM file for publication 'js'.
 generatePomFileForJvmPublication - Generates the Maven POM file for publication 'jvm'.
 generatePomFileForKotlinMultiplatformPublication - Generates the Maven POM file for publication 'kotlinMultiplatform'.
@@ -279,6 +289,12 @@ publish - Publishes all publications produced by this project.
 publishAllPublicationsToMavenRepository - Publishes all Maven publications produced by this project to the maven repository.
 publishAndroidNativeArm32PublicationToMavenLocal - Publishes Maven publication 'androidNativeArm32' to the local Maven repository.
 publishAndroidNativeArm32PublicationToMavenRepository - Publishes Maven publication 'androidNativeArm32' to Maven repository 'maven'.
+publishAndroidNativeArm64PublicationToMavenLocal - Publishes Maven publication 'androidNativeArm64' to the local Maven repository.
+publishAndroidNativeArm64PublicationToMavenRepository - Publishes Maven publication 'androidNativeArm64' to Maven repository 'maven'.
+publishAndroidNativeX64PublicationToMavenLocal - Publishes Maven publication 'androidNativeX64' to the local Maven repository.
+publishAndroidNativeX64PublicationToMavenRepository - Publishes Maven publication 'androidNativeX64' to Maven repository 'maven'.
+publishAndroidNativeX86PublicationToMavenLocal - Publishes Maven publication 'androidNativeX86' to the local Maven repository.
+publishAndroidNativeX86PublicationToMavenRepository - Publishes Maven publication 'androidNativeX86' to Maven repository 'maven'.
 publishJsPublicationToMavenLocal - Publishes Maven publication 'js' to the local Maven repository.
 publishJsPublicationToMavenRepository - Publishes Maven publication 'js' to Maven repository 'maven'.
 publishJvmPublicationToMavenLocal - Publishes Maven publication 'jvm' to the local Maven repository.
@@ -309,7 +325,7 @@ shadowJar - Create a combined JAR of project and runtime dependencies
 Verification tasks
 ------------------
 allTests - Runs the tests for all targets and create aggregated report
-apiCheck - Shortcut task that depends on all specific check tasks
+apiCheck - Checks signatures of public API against the golden value in API folder for kotlinx-serialization-cbor
 check - Runs all checks.
 iosSimulatorArm64Test - Executes Kotlin/Native unit tests for target iosSimulatorArm64.
 iosX64Test - Executes Kotlin/Native unit tests for target iosX64.
@@ -317,7 +333,6 @@ jsIrNodeTest - Run all jsIr tests inside nodejs using the builtin test framework
 jsIrTest - Run JS tests for all platforms
 jsLegacyNodeTest - Run all jsLegacy tests inside nodejs using the builtin test framework
 jsLegacyTest - Run JS tests for all platforms
-jvmApiCheck - Checks signatures of public API against the golden value in API folder for kotlinx-serialization-cbor
 jvmTest - Runs the tests of the test test run.
 koverCollectReports - Collects reports from all submodules in one directory.
 koverHtmlReport - Generates code coverage HTML report for all module's test tasks.
@@ -332,7 +347,7 @@ macosX64BackgroundTest - Executes Kotlin/Native unit tests for target macosX64.
 macosX64Test - Executes Kotlin/Native unit tests for target macosX64.
 mingwX64BackgroundTest - Executes Kotlin/Native unit tests for target mingwX64.
 mingwX64Test - Executes Kotlin/Native unit tests for target mingwX64.
-test - Runs the test suite.
+test - Runs the unit tests.
 tvosSimulatorArm64Test - Executes Kotlin/Native unit tests for target tvosSimulatorArm64.
 tvosX64Test - Executes Kotlin/Native unit tests for target tvosX64.
 watchosSimulatorArm64Test - Executes Kotlin/Native unit tests for target watchosSimulatorArm64.
@@ -341,23 +356,21 @@ watchosX86Test - Executes Kotlin/Native unit tests for target watchosX86.
 
 Other tasks
 -----------
-apiDump - Task that collects all target specific dump tasks
-jvmApiDump - Syncs API from build dir to map(map(provider(?))) dir for kotlinx-serialization-cbor
+apiDump - Syncs API from build dir to api dir for kotlinx-serialization-cbor
 
 Rules
 -----
 Pattern: clean<TaskName>: Cleans the output files of a task.
 Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
 
 To see all tasks and more detail, run gradlew tasks --all
 
 To see more detail about a task, run gradlew help --task <task>
 
-Deprecated Gradle features were used in this build, making it incompatible with Gradle 8.0.
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.9.1/userguide/command_line_interface.html#sec:command_line_warnings
 
-You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
-
-See https://docs.gradle.org/7.3.3/userguide/command_line_interface.html#sec:command_line_warnings
-
-BUILD SUCCESSFUL in 3s
-7 actionable tasks: 1 executed, 6 up-to-date
+BUILD SUCCESSFUL in 9s
+1 actionable task: 1 executed
