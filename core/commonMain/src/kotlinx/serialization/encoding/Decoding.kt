@@ -411,6 +411,8 @@ public interface CompositeDecoder {
      *     return descriptor.getElementIndex(nextKey) // getElementIndex can return UNKNOWN_NAME
      * }
      * ```
+     *
+     * If [decodeSequentially] returns `true`, the caller might skip calling this method.
      */
     public fun decodeElementIndex(descriptor: SerialDescriptor): Int
 
@@ -562,19 +564,12 @@ public interface CompositeDecoder {
  */
 public inline fun <T> Decoder.decodeStructure(
     descriptor: SerialDescriptor,
-    block: CompositeDecoder.() -> T
+    crossinline block: CompositeDecoder.() -> T
 ): T {
     val composite = beginStructure(descriptor)
-    var ex: Throwable? = null
-    try {
-        return composite.block()
-    } catch (e: Throwable) {
-        ex = e
-        throw e
-    } finally {
-        // End structure only if there is no exception, otherwise it can be swallowed
-        if (ex == null) composite.endStructure(descriptor)
-    }
+    val result = composite.block()
+    composite.endStructure(descriptor)
+    return result
 }
 
 private const val decodeMethodDeprecated = "Please migrate to decodeElement method which accepts old value." +

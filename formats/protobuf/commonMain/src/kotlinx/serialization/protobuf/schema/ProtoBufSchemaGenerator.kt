@@ -6,6 +6,7 @@ import kotlinx.serialization.*
 import kotlinx.serialization.builtins.*
 import kotlinx.serialization.descriptors.*
 import kotlinx.serialization.protobuf.*
+import kotlinx.serialization.protobuf.internal.*
 
 /**
  * Experimental generator of ProtoBuf schema that is compatible with [serializable][Serializable] Kotlin classes
@@ -175,9 +176,11 @@ public object ProtoBufSchemaGenerator {
 
             val fieldDescriptor = messageDescriptor.getElementDescriptor(index)
 
+            val isList = fieldDescriptor.isProtobufRepeated
+
             nestedTypes += when {
                 fieldDescriptor.isProtobufNamedType -> generateNamedType(messageType, index)
-                fieldDescriptor.isProtobufRepeated -> generateListType(messageType, index)
+                isList -> generateListType(messageType, index)
                 fieldDescriptor.isProtobufMap -> generateMapType(messageType, index)
                 else -> throw IllegalStateException(
                     "Unprocessed message field type with serial name " +
@@ -192,7 +195,17 @@ public object ProtoBufSchemaGenerator {
                 throw IllegalArgumentException("Field number $number is repeated in the class with serial name ${messageDescriptor.serialName}")
             }
 
-            append(' ').append(fieldName).append(" = ").append(number).appendLine(';')
+            append(' ').append(fieldName).append(" = ").append(number)
+
+            val isPackRequested = annotations.filterIsInstance<ProtoPacked>().singleOrNull() != null
+
+            when {
+                !isPackRequested ||
+                !isList || // ignore as packed only meaningful on repeated types
+                !fieldDescriptor.getElementDescriptor(0).isPackable // Ignore if the type is not allowed to be packed
+                     -> appendLine(';')
+                else -> appendLine(" [packed=true];")
+            }
         }
         appendLine('}')
 

@@ -146,7 +146,7 @@ All enum classes are serializable out of the box without having to mark them `@S
 as the following example shows.
 
 ```kotlin          
-// @Serializable annotation is not need for a enum classes
+// The @Serializable annotation is not needed for enum classes
 enum class Status { SUPPORTED }
         
 @Serializable
@@ -397,10 +397,14 @@ The next chapter covers [Serializers](serializers.md).
 
 <!--- MODULE /kotlinx-serialization-core -->
 <!--- INDEX kotlinx-serialization-core/kotlinx.serialization -->
-[Serializable]: https://kotlin.github.io/kotlinx.serialization/kotlinx-serialization-core/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html
-[SerialName]: https://kotlin.github.io/kotlinx.serialization/kotlinx-serialization-core/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html
+
+[Serializable]: https://kotlin.github.io/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html
+[SerialName]: https://kotlin.github.io/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html
+
 <!--- MODULE /kotlinx-serialization-core -->
 <!--- INDEX kotlinx-serialization-core/kotlinx.serialization.builtins -->
-[LongAsStringSerializer]: https://kotlin.github.io/kotlinx.serialization/kotlinx-serialization-core/kotlinx-serialization-core/kotlinx.serialization.builtins/-long-as-string-serializer/index.html
+
+[LongAsStringSerializer]: https://kotlin.github.io/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.builtins/-long-as-string-serializer/index.html
+
 <!--- END -->
  

@@ -12,16 +12,16 @@ buildscript {
     if (project.hasProperty("library.version")) {
         ext.overriden_version = property('library.version')
     }
-    ext.experimentalsEnabled = ["-progressive", "-Xopt-in=kotlin.Experimental",
-                                "-Xopt-in=kotlin.ExperimentalMultiplatform",
-                                "-Xopt-in=kotlinx.serialization.InternalSerializationApi"
+    ext.experimentalsEnabled = ["-progressive", "-opt-in=kotlin.Experimental",
+                                "-opt-in=kotlin.ExperimentalMultiplatform",
+                                "-opt-in=kotlinx.serialization.InternalSerializationApi"
     ]
 
-    ext.experimentalsInTestEnabled = ["-progressive", "-Xopt-in=kotlin.Experimental",
-                                      "-Xopt-in=kotlin.ExperimentalMultiplatform",
-                                      "-Xopt-in=kotlinx.serialization.ExperimentalSerializationApi",
-                                      "-Xopt-in=kotlinx.serialization.InternalSerializationApi",
-                                      "-Xopt-in=kotlin.ExperimentalUnsignedTypes"
+    ext.experimentalsInTestEnabled = ["-progressive", "-opt-in=kotlin.Experimental",
+                                      "-opt-in=kotlin.ExperimentalMultiplatform",
+                                      "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
+                                      "-opt-in=kotlinx.serialization.InternalSerializationApi",
+                                      "-opt-in=kotlin.ExperimentalUnsignedTypes"
     ]
     ext.koverEnabled = property('kover.enabled') ?: true
 
@@ -70,7 +70,7 @@ buildscript {
         classpath "org.jetbrains.kotlinx:kotlinx-knit:$knit_version"
         classpath 'ru.vyarus:gradle-animalsniffer-plugin:1.5.3' // Android API check
 
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.8'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.18'
 
         // Various benchmarking stuff
         classpath "com.github.jengelman.gradle.plugins:shadow:4.0.2"
@@ -98,6 +98,11 @@ knit {
 
 // Build API docs for all modules with dokka before running Knit
 knitPrepare.dependsOn "dokka"
+
+apply plugin: 'org.jetbrains.dokka'
+dependencies {
+    dokkaPlugin("org.jetbrains.kotlinx:dokka-pathsaver-plugin:$knit_version")
+}
 
 allprojects {
     group 'org.danbrough.kotlinx'
