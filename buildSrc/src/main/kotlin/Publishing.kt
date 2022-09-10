@@ -69,6 +69,7 @@ fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
 
 fun signPublicationIfKeyPresent(project: Project, publication: MavenPublication) {
 
+    if (project.hasProperty("signPublications"))
     project.extensions.configure<SigningExtension>("signing") {
       sign(publication)
     }
