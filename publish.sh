@@ -3,12 +3,12 @@
 cd "$(dirname "$0")"
 
 
-export JDK_8=/opt/jdk/jdk8/
+#export JDK_8=/opt/jdk/jdk8/
 
 if [ "$(uname)" = "Darwin" ]; then
 	./gradlew `cat mac_targets.txt`
 else 
-./gradlew publishAllPublicationsToSonatypeRepository
+./gradlew publishAllPublicationsToMavenRepository
 fi
 
 
