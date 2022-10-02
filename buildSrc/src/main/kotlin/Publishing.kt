@@ -45,16 +45,7 @@ fun MavenPom.configureMavenCentralMetadata(project: Project) {
 }
 
 fun mavenRepositoryUri(): URI {
-    // TODO -SNAPSHOT detection can be made here as well
-   return URI("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
-    /*
-    val repositoryId: String? = System.getenv("libs.repository.id")
-    return if (repositoryId == null) {
-        URI("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
-    } else {
-        URI("https://oss.sonatype.org/service/local/staging/deployByRepositoryId/$repositoryId")
-    }
-    */
+    URI("https://s01.oss.sonatype.org/service/local/staging/deployByRepositoryId/${System.getenv("SONATYPE_REPO_ID")}")
 }
 
 fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
