@@ -45,7 +45,7 @@ fun MavenPom.configureMavenCentralMetadata(project: Project) {
 }
 
 fun mavenRepositoryUri(): URI {
-    URI("https://s01.oss.sonatype.org/service/local/staging/deployByRepositoryId/${System.getenv("SONATYPE_REPO_ID")}")
+    return URI("https://s01.oss.sonatype.org/service/local/staging/deployByRepositoryId/${System.getenv("SONATYPE_REPO_ID")}")
 }
 
 fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
