@@ -65,6 +65,10 @@ fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
             password = project.getSensitiveProperty("sonatypePassword")
         }
     }
+    rh.maven {
+        name = "M2"
+        url = URI("/usr/local/kotlinxtras/build/m2")
+    }
 }
 
 fun signPublicationIfKeyPresent(project: Project, publication: MavenPublication) {

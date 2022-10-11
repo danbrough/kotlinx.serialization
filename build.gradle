@@ -134,6 +134,7 @@ allprojects {
     }
 
     repositories {
+        maven { url 'file:///usr/local/kotlinxtras/build/m2' }
         maven { url 'https://s01.oss.sonatype.org/content/groups/staging/' }
         mavenCentral()
         maven { url 'https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev' }
