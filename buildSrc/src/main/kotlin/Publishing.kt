@@ -60,6 +60,7 @@ fun mavenRepositoryUri(): URI {
 
 fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
     rh.maven {
+        name = "SonaType"
         url = mavenRepositoryUri()
         credentials {
             username = project.getSensitiveProperty("sonatypeUsername")
