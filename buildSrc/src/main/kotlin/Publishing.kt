@@ -69,7 +69,7 @@ fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
     }
     rh.maven {
         name = "M2"
-        url = URI("/usr/local/kotlinxtras/build/m2")
+        url = URI("file:///usr/local/kotlinxtras/build/m2")
     }
 }
 
