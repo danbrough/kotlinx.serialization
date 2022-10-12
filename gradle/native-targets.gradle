@@ -64,6 +64,7 @@ def getHostName() {
     if (target == 'Linux') return 'linux'
     if (target.startsWith('Windows')) return 'windows'
     if (target.startsWith('Mac')) return 'macos'
+    if (target.startsWith('Android')) return 'android'
     return 'unknown'
 }
 

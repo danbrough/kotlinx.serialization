@@ -38,11 +38,12 @@ buildscript {
             throw new IllegalArgumentException("'kotlin_snapshot_version' should be defined when building with snapshot compiler")
         }
         repositories {
-            maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+            maven { url 'https://s01.oss.sonatype.org/content/groups/staging/' }
         }
     }
 
     repositories {
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
         maven { url 'https://maven.pkg.jetbrains.space/kotlin/p/dokka/dev' }
         // kotlin-dev with space redirector
         maven { url "https://cache-redirector.jetbrains.com/maven.pkg.jetbrains.space/kotlin/p/kotlin/dev" }

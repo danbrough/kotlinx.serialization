@@ -50,12 +50,18 @@ fun mavenRepositoryUri(): URI {
 
 fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
     rh.maven {
+        name = "SonaType"
         url = mavenRepositoryUri()
         credentials {
             username = project.getSensitiveProperty("sonatypeUsername")
             password = project.getSensitiveProperty("sonatypePassword")
         }
     }
+     rh.maven {
+        name = "M2"
+        url = URI("file:///usr/local/kotlinxtras/build/m2")
+    }
+
 }
 
 fun signPublicationIfKeyPresent(project: Project, publication: MavenPublication) {

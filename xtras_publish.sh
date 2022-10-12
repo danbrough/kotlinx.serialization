@@ -8,7 +8,7 @@ cd "$(dirname "$0")"
 if [ "$(uname)" = "Darwin" ]; then
 	./gradlew -PsignPublications `cat mac_targets.txt`
 else 
-./gradlew publishAllPublicationsToMavenRepository -PsignPublications
+./gradlew publishAllPublicationsToSonaTypeRepository -PsignPublications
 fi
 
 
