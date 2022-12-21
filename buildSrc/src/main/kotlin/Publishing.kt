@@ -46,34 +46,41 @@ fun MavenPom.configureMavenCentralMetadata(project: Project) {
 
 fun mavenRepositoryUri(): URI {
     // TODO -SNAPSHOT detection can be made here as well
-    val repositoryId: String? = System.getenv("libs.repository.id")
+    /*val repositoryId: String? = System.getenv("libs.repository.id")
     return if (repositoryId == null) {
         URI("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
     } else {
         URI("https://oss.sonatype.org/service/local/staging/deployByRepositoryId/$repositoryId")
-    }
+    }*/
+    return URI("https://s01.oss.sonatype.org/service/local/staging/deployByRepositoryId/${System.getenv("SONATYPE_REPO_ID")}")
 }
 
 fun configureMavenPublication(rh: RepositoryHandler, project: Project) {
     rh.maven {
+        name = "SonaType"
         url = mavenRepositoryUri()
         credentials {
-            username = project.getSensitiveProperty("libs.sonatype.user")
-            password = project.getSensitiveProperty("libs.sonatype.password")
+            username = project.getSensitiveProperty("sonatypeUsername")
+            password = project.getSensitiveProperty("sonatypePassword")
         }
     }
 }
 
 fun signPublicationIfKeyPresent(project: Project, publication: MavenPublication) {
-    val keyId = project.getSensitiveProperty("libs.sign.key.id")
-    val signingKey = project.getSensitiveProperty("libs.sign.key.private")
-    val signingKeyPassphrase = project.getSensitiveProperty("libs.sign.passphrase")
-    if (!signingKey.isNullOrBlank()) {
+    //val keyId = project.getSensitiveProperty("libs.sign.key.id")
+ //   val signingKey = project.getSensitiveProperty("libs.sign.key.private")
+//    val signingKeyPassphrase = project.getSensitiveProperty("libs.sign.passphrase")
+
+        if (project.hasProperty("signPublications"))
+    project.extensions.configure<SigningExtension>("signing") {
+      sign(publication)
+    }
+    /*if (!signingKey.isNullOrBlank()) {
         project.extensions.configure<SigningExtension>("signing") {
             useInMemoryPgpKeys(keyId, signingKey, signingKeyPassphrase)
             sign(publication)
         }
-    }
+    }*/
 }
 
 private fun Project.getSensitiveProperty(name: String): String? {
