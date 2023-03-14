@@ -18,3 +18,5 @@ node_modules
 
 # benchmarks.jar
 /benchmarks.jar
+diffs.txt
+local.properties
